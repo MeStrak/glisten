@@ -1,0 +1,104 @@
+{
+    "eventFiltered": [
+        {
+            "_id": "5ed13b42509657001802a847",
+            "timestamp": "2020-05-24T16:41:38.328Z",
+            "data": {
+                "user": "Bruce Wayne",
+                "comment": "I am the batman.",
+                "rating": 6,
+                "sentimentscore": 5
+            }
+        },
+        {
+            "_id": "5ed13b54bffb5a001972f493",
+            "timestamp": "2020-05-24T16:41:56.432Z",
+            "data": {
+                "user": "Gordon Nibble",
+                "comment": "What on earth is this app? I hate it so much.",
+                "npsrating": 0,
+                "sentimentscore": -5
+            }
+        },
+        {
+            "_id": "5ed13c73bffb5a001972f494",
+            "timestamp": "2020-05-23T16:46:43.492Z",
+            "data": {
+                "user": "Lucy Misfit",
+                "comment": "It's more fun to be a pirate than in the Navy.",
+                "npsRating": 6,
+                "commentSentimentScore": 5
+            }
+        },
+        {
+            "_id": "5ed147562124df0011c48a47",
+            "timestamp": "2020-05-23T17:33:10.135Z",
+            "data": {
+                "user": "Anonymous",
+                "comment": "Where'd you get the coconuts? On second thoughts, let's not go there. It is a silly place. Burn her anyway! On second thoughts, let's not go there. It is a silly place. You can't expect to wield supreme power just 'cause some watery tart threw a sword at you!",
+                "npsRating": 9,
+                "commentSentimentScore": 5
+            }
+        },
+        {
+            "_id": "5ed14792509657001802a849",
+            "timestamp": "2020-05-22T17:34:10.659Z",
+            "data": {
+                "user": "Anonymous",
+                "comment": "And this isn't my nose. This is a false one. Well, what do you want? Knights of Ni, we are but simple travelers who seek the enchanter who lives beyond these woods. Knights of Ni, we are but simple travelers who seek the enchanter who lives beyond these woods.",
+                "npsRating": 9,
+                "commentSentimentScore": 5
+            }
+        },
+        {
+            "_id": "5ed17026b6fe180018e422a9",
+            "timestamp": "2020-05-22T20:27:18.094Z",
+            "data": {
+                "user": "Anonymous",
+                "comment": "Knights of Ni, we are but simple travelers who seek the enchanter who lives beyond these woods.",
+                "npsRating": 9,
+                "commentSentimentScore": 5
+            }
+        },
+        {
+            "_id": "5ed1707beb068700119d48d2",
+            "timestamp": "2020-05-20T20:28:43.426Z",
+            "data": {
+                "user": "Jennifer Grimspillover",
+                "comment": "I love this thing!!!",
+                "npsRating": 9,
+                "commentSentimentScore": 5
+            }
+        },
+        {
+            "_id": "5ed1707eb6fe180018e422aa",
+            "timestamp": "2020-05-20T20:28:46.848Z",
+            "data": {
+                "user": "Adam Monsterfuddle",
+                "comment": "The new release is great, much faster than before. Having a few issues with the widget screen though - it keeps crashing.",
+                "npsRating": 7,
+                "commentSentimentScore": 3
+            }
+        },
+        {
+            "_id": "5ed17081f3f9d10018e16ba2",
+            "timestamp": "2020-05-20T20:28:49.009Z",
+            "data": {
+                "user": "Spit McClintock",
+                "comment": "Dolcelatte croque monsieur cauliflower cheese. Brie edam mascarpone cheddar cheddar caerphilly macaroni cheese chalk and cheese.",
+                "npsRating": 9,
+                "commentSentimentScore": 5
+            }
+        },
+        {
+            "_id": "5ed17083b6fe180018e422ab",
+            "timestamp": "2020-05-20T20:00:51.341Z",
+            "data": {
+                "user": "Trevor",
+                "comment": "Bocconcini ricotta pepper jack cheese triangles pepper jack when the cheese comes out everybody's happy queso mozzarella. Rubber cheese st. agur blue cheese edam.",
+                "npsRating": 9,
+                "commentSentimentScore": 5
+            }
+        }
+    ]
+}
