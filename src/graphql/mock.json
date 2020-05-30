@@ -6,7 +6,7 @@
             "data": {
                 "user": "Bruce Wayne",
                 "comment": "I am the batman.",
-                "rating": 6,
+                "npsRating": 6,
                 "sentimentscore": 5
             }
         },
@@ -16,7 +16,7 @@
             "data": {
                 "user": "Gordon Nibble",
                 "comment": "What on earth is this app? I hate it so much.",
-                "npsrating": 0,
+                "npsRating": 0,
                 "sentimentscore": -5
             }
         },

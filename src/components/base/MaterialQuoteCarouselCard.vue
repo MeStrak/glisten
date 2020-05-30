@@ -44,7 +44,7 @@
           
         >
          <div> <q class="display-3"><i>{{ comment | truncate(90, '...')}}</i></q>
-         <div class="display-2 pt-0 pl-12"> - {{personname}}</div></div>
+         <div class="display-2 pt-0 pl-12"> - {{commentnames[i]}}</div></div>
         </v-row>
       </v-sheet>
     </v-carousel-item>
@@ -117,6 +117,10 @@
         default: undefined,
       },
       comments: {
+        type: Array,
+        default: undefined,
+      },
+      commentnames: {
         type: Array,
         default: undefined,
       },

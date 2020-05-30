@@ -250,6 +250,7 @@ cols="12"
           icon="mdi-comment"
           title="Latest comments"
           v-bind:comments=comments
+          v-bind:commentnames=commentNames          
           v-bind:slidecolors=colors
           sub-icon="mdi-clock"
           sub-text="Just Updated"
@@ -297,9 +298,9 @@ cols="12"
         },
         dataCompletedTasksChart: {
           data: {
-            labels: ['12am', '3pm', '6pm', '9pm', '12pm', '3am', '6am', '9am'],
+            //labels: ['12am', '3pm', '6pm', '9pm', '12pm', '3am', '6am', '9am'],
             series: [
-              [230, 750, 450, 300, 280, 240, 200, 190],
+              mockjson.eventFiltered.map(feedback => feedback.data.npsRating),
             ],
           },
           options: {
@@ -307,7 +308,7 @@ cols="12"
               tension: 0,
             }),
             low: 0,
-            high: 1000, // creative tim: we recommend you to set the high sa the biggest value + something for a better look
+            high: 10, // creative tim: we recommend you to set the high sa the biggest value + something for a better look
             chartPadding: {
               top: 0,
               right: 0,
@@ -355,19 +356,18 @@ cols="12"
           'red lighten-1',
           'deep-purple accent-4',
         ],
-        comments: [
-          "It's more fun to be a pirate than in the Navy.",
-          "Where'd you get the coconuts? On second thoughts, let's not go there. It is a silly place. Burn her anyway! On second thoughts, let's not go there. It is a silly place. You can't expect to wield supreme power just 'cause some watery tart threw a sword at you!",
-          "Knights of Ni, we are but simple travelers who seek the enchanter who lives beyond these woods.",
-          "And this isn't my nose. This is a false one. Well, what do you want? Knights of Ni, we are but simple travelers who seek the enchanter who lives beyond these woods. Knights of Ni, we are but simple travelers who seek the enchanter who lives beyond these woods.",
-          'I am the batman.',
-        ],
+        comments: mockjson.eventFiltered.map(feedback => feedback.data.comment),
+        commentNames: mockjson.eventFiltered.map(feedback => feedback.data.user),
       }
     },
 
     methods: {
       complete (index) {
         this.list[index] = !this.list[index]
+      },
+      calculateWeeklyAverage() {
+        this.weeks = [...new Set(mockjson.eventFiltered.map(feedback => feedback.timestamp))];
+        mockjson.eventFiltered.map(feedback => feedback.data.npsRating)
       },
     },
   }
