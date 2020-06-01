@@ -121,7 +121,7 @@
             </v-tooltip>
           </template>
 
-          <h3 class="card-title font-weight-light mt-2 ml-2">Sentiment analysis</h3>
+          <h3 class="card-title font-weight-light mt-2 ml-2">Comment sentiment analysis</h3>
           <!-- 
           <p class="d-inline-flex font-weight-light ml-2 mt-1">Last Last Campaign Performance</p>
 
@@ -138,7 +138,7 @@
           icon="mdi-human-greeting"
           title="Detractors, Passives, Promoters"
           v-bind:categories="['Detractors', 'Passives', 'Promoters']"
-          v-bind:values="[10, 50, 60]"
+          v-bind:values="[detractorCount, passiveCount, promoterCount]"
           v-bind:infoicons="['mdi-human-handsdown', 'mdi-human', 'mdi-human-handsup']"
           v-bind:infoiconcolours="['red', 'blue', 'green']"
           sub-icon="mdi-clock"
@@ -174,7 +174,9 @@ export default {
     return {
       eventFiltered: mockjson,
       weeks: null,
-      sentimentChart: [],
+      detractorCount: 0,
+      passiveCount: 0,
+      promoterCount: 0,
       
       npsScoreChart: {
         data: {
@@ -197,8 +199,8 @@ export default {
           lineSmooth: this.$chartist.Interpolation.cardinal({
             tension: 1
           }),
-          low: 0,
-          high: 10, // creative tim: we recommend you to set the high sa the biggest value + something for a better look
+          low: -100,
+          high: 100, // creative tim: we recommend you to set the high sa the biggest value + something for a better look
           chartPadding: {
             top: 15,
             right: 10,
@@ -316,12 +318,28 @@ export default {
           );
         });
 
-        let feedbackCountDataPoint = { x: new Date(week), y: filteredWeekData.length };
+        let responseCount = filteredWeekData.length;
+        let feedbackCountDataPoint = { x: new Date(week), y: responseCount };
         this.feedbackCountChart.data.series[0].data.push(feedbackCountDataPoint);
 
-        let npsRatings = filteredWeekData.map(el => el.data.npsRating);
-        let npsDataPoint = { x: new Date(week), y: mean(npsRatings) };
+        // calculate average score from users. Commented out as currently unused
+        // let npsRatings = filteredWeekData.map(el => el.data.npsRating);
+        // let npsDataPoint = { x: new Date(week), y: mean(npsRatings) };
+        // this.npsScoreChart.data.series[0].data.push(npsDataPoint);
+
+        // Promoters give scores of 8+, detractors 0-6 https://nps-calculator.com/
+        let npsPromoterCount = filteredWeekData.reduce((n, x) => n + (x.data.npsRating >= 9), 0);
+        let npsDetractorCount = filteredWeekData.reduce((n, x) => n + (x.data.npsRating <= 6), 0);
+        let promoterPercentage = (npsPromoterCount/responseCount) * 100;
+        let detractorPercentage = (npsDetractorCount/responseCount) * 100;
+
+        let npsScore = promoterPercentage - detractorPercentage;
+        let npsDataPoint = { x: new Date(week), y: npsScore };
         this.npsScoreChart.data.series[0].data.push(npsDataPoint);
+        this.detractorCount += npsDetractorCount;
+        this.promoterCount +=npsPromoterCount;
+
+
 
         let sentimentScores = filteredWeekData.map(el => el.data.commentSentimentScore);
         let sentimentDataPoint = {
@@ -330,6 +348,9 @@ export default {
         };
         this.sentimentChart.data.series[0].data.push(sentimentDataPoint);
       });
+
+      console.log('fart length');
+      this.passiveCount = mockjson.eventFiltered.length - this.detractorCount - this.promoterCount;
     }
   }
 };

@@ -6,7 +6,7 @@
             "data": {
                 "user": "Bruce Wayne",
                 "comment": "I am the batman.",
-                "npsRating": 1,
+                "npsRating": 6,
                 "commentSentimentScore": 2
             }
         },
@@ -16,7 +16,7 @@
             "data": {
                 "user": "Bruce Wayne",
                 "comment": "I am the batman.",
-                "npsRating": 1,
+                "npsRating": 7,
                 "commentSentimentScore": 3
             }
         },{
@@ -25,7 +25,7 @@
             "data": {
                 "user": "Bruce Wayne",
                 "comment": "I am the batman.",
-                "npsRating": 1,
+                "npsRating": 7,
                 "commentSentimentScore": 3
             }
         },{
@@ -34,7 +34,7 @@
             "data": {
                 "user": "Bruce Wayne",
                 "comment": "I am the batman.",
-                "npsRating": 1,
+                "npsRating": 8,
                 "commentSentimentScore": 3
             }
         },{
@@ -43,7 +43,7 @@
             "data": {
                 "user": "Bruce Wayne",
                 "comment": "I am the batman.",
-                "npsRating": 1,
+                "npsRating": 7,
                 "commentSentimentScore": 3
             }
         },{
@@ -52,7 +52,7 @@
             "data": {
                 "user": "Bruce Wayne",
                 "comment": "I am the batman.",
-                "npsRating": 1,
+                "npsRating": 8,
                 "commentSentimentScore": 3
             }
         },{
@@ -1204,7 +1204,7 @@
             "data": {
                 "user": "Bruce Wayne",
                 "comment": "I am the batman.",
-                "npsRating": 1,
+                "npsRating": 7,
                 "commentSentimentScore": 3
             }
         },{
@@ -1232,7 +1232,7 @@
             "data": {
                 "user": "Bruce Wayne",
                 "comment": "I am the batman.",
-                "npsRating": 3,
+                "npsRating": 8,
                 "commentSentimentScore": 4
             }
         },
@@ -1242,7 +1242,7 @@
             "data": {
                 "user": "Bruce Wayne",
                 "comment": "I am the batman.",
-                "npsRating": 2,
+                "npsRating": 10,
                 "commentSentimentScore": 4
             }
         },
@@ -1950,7 +1950,67 @@
             "data": {
                 "user": "Gordon Nibble",
                 "comment": "What on earth is this app? I hate it so much.",
-                "npsRating": 0,
+                "npsRating": 10,
+                "commentSentimentScore": -5
+            }
+        },
+        {
+            "_id": "5ed17083b6fe180018e422ab",
+            "timestamp": "2020-05-31T20:00:51.341Z",
+            "data": {
+                "user": "Trevor",
+                "comment": "Bocconcini ricotta pepper jack cheese triangles pepper jack when the cheese comes out everybody's happy queso mozzarella. Rubber cheese st. agur blue cheese edam.",
+                "npsRating": 10,
+                "commentSentimentScore": 5
+            }
+        },
+        {
+            "_id": "5ed13b42509657001802a847",
+            "timestamp": "2020-06-01T16:41:38.328Z",
+            "data": {
+                "user": "Bruce Wayne",
+                "comment": "I am the batman.",
+                "npsRating": 10,
+                "commentSentimentScore": 5
+            }
+        },
+        {
+            "_id": "5ed13b54bffb5a001972f493",
+            "timestamp": "2020-06-02T16:41:56.432Z",
+            "data": {
+                "user": "Gordon Nibble",
+                "comment": "What on earth is this app? I hate it so much.",
+                "npsRating": 10,
+                "commentSentimentScore": -5
+            }
+        },
+        {
+            "_id": "5ed17083b6fe180018e422ab",
+            "timestamp": "2020-05-31T20:00:51.341Z",
+            "data": {
+                "user": "Trevor",
+                "comment": "Bocconcini ricotta pepper jack cheese triangles pepper jack when the cheese comes out everybody's happy queso mozzarella. Rubber cheese st. agur blue cheese edam.",
+                "npsRating": 10,
+                "commentSentimentScore": 5
+            }
+        },
+        {
+            "_id": "5ed13b42509657001802a847",
+            "timestamp": "2020-06-01T16:41:38.328Z",
+            "data": {
+                "user": "Bruce Wayne",
+                "comment": "I am the batman.",
+                "npsRating": 9,
+                "commentSentimentScore": 5
+            }
+        },
+        {
+            "_id": "5ed13b54bffb5a001972f493",
+            "timestamp": "2020-06-02T16:41:56.432Z",
+            "data": {
+                "user": "Gordon Nibble",
+                "comment": "What on earth is this app? I hate it so much.",
+                "npsRating": 9,
                 "commentSentimentScore": -5
             }
         },
@@ -1970,77 +2030,17 @@
             "data": {
                 "user": "Bruce Wayne",
                 "comment": "I am the batman.",
-                "npsRating": 6,
-                "commentSentimentScore": 5
-            }
-        },
-        {
-            "_id": "5ed13b54bffb5a001972f493",
-            "timestamp": "2020-06-02T16:41:56.432Z",
-            "data": {
-                "user": "Gordon Nibble",
-                "comment": "What on earth is this app? I hate it so much.",
-                "npsRating": 0,
-                "commentSentimentScore": -5
-            }
-        },
-        {
-            "_id": "5ed17083b6fe180018e422ab",
-            "timestamp": "2020-05-31T20:00:51.341Z",
-            "data": {
-                "user": "Trevor",
-                "comment": "Bocconcini ricotta pepper jack cheese triangles pepper jack when the cheese comes out everybody's happy queso mozzarella. Rubber cheese st. agur blue cheese edam.",
                 "npsRating": 9,
                 "commentSentimentScore": 5
             }
         },
         {
-            "_id": "5ed13b42509657001802a847",
-            "timestamp": "2020-06-01T16:41:38.328Z",
-            "data": {
-                "user": "Bruce Wayne",
-                "comment": "I am the batman.",
-                "npsRating": 6,
-                "commentSentimentScore": 5
-            }
-        },
-        {
             "_id": "5ed13b54bffb5a001972f493",
             "timestamp": "2020-06-02T16:41:56.432Z",
             "data": {
                 "user": "Gordon Nibble",
                 "comment": "What on earth is this app? I hate it so much.",
-                "npsRating": 0,
-                "commentSentimentScore": -5
-            }
-        },
-        {
-            "_id": "5ed17083b6fe180018e422ab",
-            "timestamp": "2020-05-31T20:00:51.341Z",
-            "data": {
-                "user": "Trevor",
-                "comment": "Bocconcini ricotta pepper jack cheese triangles pepper jack when the cheese comes out everybody's happy queso mozzarella. Rubber cheese st. agur blue cheese edam.",
                 "npsRating": 9,
-                "commentSentimentScore": 5
-            }
-        },
-        {
-            "_id": "5ed13b42509657001802a847",
-            "timestamp": "2020-06-01T16:41:38.328Z",
-            "data": {
-                "user": "Bruce Wayne",
-                "comment": "I am the batman.",
-                "npsRating": 6,
-                "commentSentimentScore": 5
-            }
-        },
-        {
-            "_id": "5ed13b54bffb5a001972f493",
-            "timestamp": "2020-06-02T16:41:56.432Z",
-            "data": {
-                "user": "Gordon Nibble",
-                "comment": "What on earth is this app? I hate it so much.",
-                "npsRating": 0,
                 "commentSentimentScore": -5
             }
         }

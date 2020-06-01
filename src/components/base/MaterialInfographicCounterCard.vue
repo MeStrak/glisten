@@ -24,9 +24,9 @@
     >
       
 
-    <v-icon v-for="n in 5" :key="n" large color="red">mdi-human-handsdown</v-icon>
-    <v-icon v-for="n in 50" :key="n" large color="orange">mdi-human</v-icon>
-    <v-icon v-for="n in 30" :key="n" large color="green">mdi-human-handsup</v-icon>
+    <v-icon v-for="n in values[0]" :key="n" large color="red">mdi-human-handsdown</v-icon>
+    <v-icon v-for="n in values[1]" :key="n" large color="orange">mdi-human</v-icon>
+    <v-icon v-for="n in values[2]" :key="n" large color="green">mdi-human-handsup</v-icon>
 
     </v-col>
     <v-col
@@ -86,8 +86,8 @@
         type: String,
         default: undefined,
       },
-      value: {
-        type: String,
+      values: {
+        type: [],
         default: undefined,
       },
       smallValue: {
