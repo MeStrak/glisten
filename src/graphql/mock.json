@@ -2,22 +2,52 @@
     "eventFiltered": [
         {
             "_id": "5ed13b42509657001802a847",
-            "timestamp": "2020-05-24T16:41:38.328Z",
+            "timestamp": "2020-05-16T16:41:38.328Z",
             "data": {
                 "user": "Bruce Wayne",
                 "comment": "I am the batman.",
-                "npsRating": 6,
-                "sentimentscore": 5
+                "npsRating": 1,
+                "commentSentimentScore": 2
             }
         },
         {
-            "_id": "5ed13b54bffb5a001972f493",
-            "timestamp": "2020-05-24T16:41:56.432Z",
+            "_id": "5ed13b42509657001802a847",
+            "timestamp": "2020-05-11T16:41:38.328Z",
             "data": {
-                "user": "Gordon Nibble",
-                "comment": "What on earth is this app? I hate it so much.",
-                "npsRating": 0,
-                "sentimentscore": -5
+                "user": "Bruce Wayne",
+                "comment": "I am the batman.",
+                "npsRating": 1,
+                "commentSentimentScore": 3
+            }
+        },
+        {
+            "_id": "5ed13b42509657001802a847",
+            "timestamp": "2020-05-14T16:41:38.328Z",
+            "data": {
+                "user": "Bruce Wayne",
+                "comment": "I am the batman.",
+                "npsRating": 3,
+                "commentSentimentScore": 4
+            }
+        },
+        {
+            "_id": "5ed13b42509657001802a847",
+            "timestamp": "2020-05-14T16:41:38.328Z",
+            "data": {
+                "user": "Bruce Wayne",
+                "comment": "I am the batman.",
+                "npsRating": 2,
+                "commentSentimentScore": 4
+            }
+        },
+        {
+            "_id": "5ed13b42509657001802a847",
+            "timestamp": "2020-05-12T16:41:38.328Z",
+            "data": {
+                "user": "Bruce Wayne",
+                "comment": "I am the batman.",
+                "npsRating": 2,
+                "commentSentimentScore": 4
             }
         },
         {
@@ -98,6 +128,56 @@
                 "comment": "Bocconcini ricotta pepper jack cheese triangles pepper jack when the cheese comes out everybody's happy queso mozzarella. Rubber cheese st. agur blue cheese edam.",
                 "npsRating": 9,
                 "commentSentimentScore": 5
+            }
+        },
+        {
+            "_id": "5ed13b42509657001802a847",
+            "timestamp": "2020-05-24T16:41:38.328Z",
+            "data": {
+                "user": "Bruce Wayne",
+                "comment": "I am the batman.",
+                "npsRating": 6,
+                "commentSentimentScore": 5
+            }
+        },
+        {
+            "_id": "5ed13b54bffb5a001972f493",
+            "timestamp": "2020-05-24T16:41:56.432Z",
+            "data": {
+                "user": "Gordon Nibble",
+                "comment": "What on earth is this app? I hate it so much.",
+                "npsRating": 0,
+                "commentSentimentScore": -5
+            }
+        },
+        {
+            "_id": "5ed17083b6fe180018e422ab",
+            "timestamp": "2020-05-31T20:00:51.341Z",
+            "data": {
+                "user": "Trevor",
+                "comment": "Bocconcini ricotta pepper jack cheese triangles pepper jack when the cheese comes out everybody's happy queso mozzarella. Rubber cheese st. agur blue cheese edam.",
+                "npsRating": 9,
+                "commentSentimentScore": 5
+            }
+        },
+        {
+            "_id": "5ed13b42509657001802a847",
+            "timestamp": "2020-06-01T16:41:38.328Z",
+            "data": {
+                "user": "Bruce Wayne",
+                "comment": "I am the batman.",
+                "npsRating": 6,
+                "commentSentimentScore": 5
+            }
+        },
+        {
+            "_id": "5ed13b54bffb5a001972f493",
+            "timestamp": "2020-06-02T16:41:56.432Z",
+            "data": {
+                "user": "Gordon Nibble",
+                "comment": "What on earth is this app? I hate it so much.",
+                "npsRating": 0,
+                "commentSentimentScore": -5
             }
         }
     ]

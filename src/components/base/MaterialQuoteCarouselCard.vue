@@ -27,6 +27,7 @@
     cycle
     height="200"
     hide-delimiter-background
+    hide-delimiters
     show-arrows-on-hover
   >
     <v-carousel-item
