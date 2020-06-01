@@ -48,8 +48,8 @@
 
       <v-col cols="12" lg="4">
         <base-material-chart-card
-          :data="npsScoreChart.data"
-          :options="npsScoreChart.options"
+          :data="feedbackCountChart.data"
+          :options="feedbackCountChart.options"
           color="success"
           hover-reveal
           type="Line"
@@ -93,8 +93,8 @@
 
       <v-col cols="12" lg="4">
         <base-material-chart-card
-          :data="dataCompletedTasksChart.data"
-          :options="dataCompletedTasksChart.options"
+          :data="sentimentChart.data"
+          :options="sentimentChart.options"
           hover-reveal
           color="info"
           type="Line"
@@ -174,24 +174,8 @@ export default {
     return {
       eventFiltered: mockjson,
       weeks: null,
-      npschart: [],
       sentimentChart: [],
-      dailySalesChart: {
-        data: this.npschart,
-        options: {
-          lineSmooth: this.$chartist.Interpolation.cardinal({
-            tension: 0
-          }),
-          low: 0,
-          high: 50, // creative tim: we recommend you to set the high sa the biggest value + something for a better look
-          chartPadding: {
-            top: 0,
-            right: 0,
-            bottom: 0,
-            left: 0
-          }
-        }
-      },
+      
       npsScoreChart: {
         data: {
           series: [
@@ -211,78 +195,78 @@ export default {
             }
           },
           lineSmooth: this.$chartist.Interpolation.cardinal({
-            tension: 0
+            tension: 1
           }),
           low: 0,
           high: 10, // creative tim: we recommend you to set the high sa the biggest value + something for a better look
           chartPadding: {
-            top: 0,
+            top: 15,
             right: 10,
-            bottom: 0,
+            bottom: 10,
             left: 0
           }
         }
       },
-      dataCompletedTasksChart: {
+      feedbackCountChart: {
         data: {
-          labels: ["12am", "3pm", "6pm", "9pm", "12pm", "3am", "6am", "9am"],
           series: [
-            mockjson.eventFiltered.map(feedback => feedback.data.npsRating)
+            {
+              name: "series-1",
+              data: []
+            }
           ]
-        },
-        options: {
-          lineSmooth: this.$chartist.Interpolation.cardinal({
-            tension: 0
-          }),
-          low: 0,
-          high: 10, // creative tim: we recommend you to set the high sa the biggest value + something for a better look
-          chartPadding: {
-            top: 0,
-            right: 0,
-            bottom: 0,
-            left: 0
-          }
-        }
-      },
-      emailsSubscriptionChart: {
-        data: {
-          labels: [
-            "Ja",
-            "Fe",
-            "Ma",
-            "Ap",
-            "Mai",
-            "Ju",
-            "Jul",
-            "Au",
-            "Se",
-            "Oc",
-            "No",
-            "De"
-          ],
-          series: [[542, 443, 320, 780, 553, 453, 326, 434, 568, 610, 756, 895]]
         },
         options: {
           axisX: {
-            showGrid: false
+            type: this.$chartist.FixedScaleAxis,
+            divisor: 3,
+            labelInterpolationFnc: function(value) {
+              var moment = require("moment");
+              return moment(value).format("MMM D");
+            }
           },
+          lineSmooth: this.$chartist.Interpolation.cardinal({
+            tension: 1
+          }),
           low: 0,
-          high: 1000,
           chartPadding: {
-            top: 0,
-            right: 5,
-            bottom: 0,
+            top: 15,
+            right: 10,
+            bottom: 10,
             left: 0
           }
-        },
-        responsiveOptions: [
-          [
-            "screen and (max-width: 640px)",
+        }
+      },
+    sentimentChart: {
+        data: {
+          series: [
             {
-              seriesBarDistance: 5
+              name: "series-1",
+              data: []
             }
           ]
-        ]
+        },
+        options: {
+          axisX: {
+            type: this.$chartist.FixedScaleAxis,
+            divisor: 3,
+            labelInterpolationFnc: function(value) {
+              var moment = require("moment");
+              return moment(value).format("MMM D");
+            }
+          },
+          lineSmooth: this.$chartist.Interpolation.cardinal({
+            tension: 1
+          }),
+          low: -5,
+          high: 5,
+          chartPadding: {
+            top: 15,
+            right: 10,
+            bottom: 10,
+            left: 0
+          }
+        }
       },
       colors: [
         "indigo",
@@ -324,7 +308,7 @@ export default {
       ];
 
       this.weeks.forEach(week => {
-        var newArray = mockjson.eventFiltered.filter(function(el) {
+        var filteredWeekData = mockjson.eventFiltered.filter(function(el) {
           return (
             moment(el.timestamp)
               .startOf("week")
@@ -332,16 +316,19 @@ export default {
           );
         });
 
-        let npsRatings = newArray.map(el => el.data.npsRating);
+        let feedbackCountDataPoint = { x: new Date(week), y: filteredWeekData.length };
+        this.feedbackCountChart.data.series[0].data.push(feedbackCountDataPoint);
+
+        let npsRatings = filteredWeekData.map(el => el.data.npsRating);
         let npsDataPoint = { x: new Date(week), y: mean(npsRatings) };
         this.npsScoreChart.data.series[0].data.push(npsDataPoint);
 
-        let sentimentScores = newArray.map(el => el.data.commentSentimentScore);
+        let sentimentScores = filteredWeekData.map(el => el.data.commentSentimentScore);
         let sentimentDataPoint = {
           x: new Date(week),
           y: mean(sentimentScores)
         };
-        this.sentimentChart.push(sentimentDataPoint);
+        this.sentimentChart.data.series[0].data.push(sentimentDataPoint);
       });
     }
   }
